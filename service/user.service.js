@@ -25,8 +25,8 @@ class UserService {
       activationLink,
     });
     await mailService.sendActivationMail(
-      email,
-      `${config.get('api-url')}/api/activate/${activationLink}`
+      email
+      // `${config.get('api-url')}/api/activate/${activationLink}`
     );
 
     const userDto = new UserDto(user); // id, email, isActivated
@@ -47,10 +47,10 @@ class UserService {
   }
 
   async sendMail(email) {
-    const activationLink = nanoid();
+    // const activationLink = nanoid();
     await mailService.sendActivationMail(
-      email,
-      `${config.get('api-url')}/api/activate-test/${activationLink}`
+      email
+      // `${config.get('api-url')}/api/activate-test/${activationLink}`
     );
   }
 }

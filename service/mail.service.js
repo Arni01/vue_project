@@ -15,19 +15,19 @@ class MailService {
     });
   }
 
-  getHTMLMAil(link) {
-    let htmlMail = fs.readFileSync('./sendMailNode.html', 'utf8');
-    htmlMail = htmlMail.replace('#LINK', link);
+  getHTMLMAil() {
+    const htmlMail = fs.readFileSync('./sendMailNode.html', 'utf8');
+    // htmlMail = htmlMail.replace('#LINK', link);
     return htmlMail;
   }
 
-  async sendActivationMail(to, link) {
+  async sendActivationMail(to) {
     await this.transporter.sendMail({
       from: config.get('smtp-user'),
       to,
       subject: 'Активация почты',
       text: '',
-      html: this.getHTMLMAil(link),
+      html: this.getHTMLMAil(),
     });
   }
 }

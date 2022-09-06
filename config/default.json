@@ -1,12 +1,12 @@
 {
   "PORT": 5000,
+  "api-url": "http://localhost:5000",
+  "client-url": "https://ya.ru/",
   "jstSecretAccess": "secret data access",
   "jstSecretRefresh": "secret data refresh",
   "mongoUri": "mongodb+srv://root:root@cluster0.a2xbv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   "smtp-host": "smtp.gmail.com",
+  "smtp-password": "",
   "smtp-port": 587,
-  "smtp-user": "arni01test@gmail.com",
-  "smtp-password": "rootroot01test",
-  "api-url": "http://localhost:5000",
-  "client-url": "https://ya.ru/"
+  "smtp-user": "arni01test@gmail.com"
 }

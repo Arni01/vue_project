@@ -61,6 +61,7 @@ class UserController {
   async sendMail(req, res, next) {
     try {
       const { email } = req.body;
+      console.log(email);
       await userService.sendMail(email);
       res.json('ok');
     } catch (e) {
